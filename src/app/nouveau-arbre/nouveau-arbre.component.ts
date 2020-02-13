@@ -35,7 +35,7 @@ export class NouveauArbreComponent implements OnInit {
 
   onClickSave(){
       this.arbreService.add(this.arbre).subscribe();
-      this.router.navigate(['/', 'home', 'listAbres', 'detailsArbre', this.arbre.id]);
+      this.router.navigate(['/', 'home', 'listAbres']);
   }
 
   onFileSelected(event){

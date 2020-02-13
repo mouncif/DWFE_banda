@@ -416,8 +416,75 @@
       },
       "pathogene": "none",
       "photos": [
+        "../../../assets/img/lonely_tree_185144.jpg"
+      ]
+    },
+    {
+      "id": "id2",
+      "essence": "",
+      "variete": "",
+      "alignement": "",
+      "circonference": 0,
+      "atteintesPhysiologique": "none",
+      "contraintesBatiment": "",
+      "defautsMecaniques": "none",
+      "distanceAuBati": 0,
+      "etatPhysiologique": "",
+      "hauter": 0,
+      "incedentRacine": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "pathogene": "none",
+      "photos": [
+        "../../../assets/img/lonely_tree_185144.jpg",
         "../../../assets/img/41302892474_cc34b633f6_b.jpg"
       ]
+    },
+    {
+      "id": "id3",
+      "essence": "",
+      "variete": "",
+      "alignement": "",
+      "circonference": 0,
+      "atteintesPhysiologique": "none",
+      "contraintesBatiment": "",
+      "defautsMecaniques": "none",
+      "distanceAuBati": 0,
+      "etatPhysiologique": "",
+      "hauter": 0,
+      "incedentRacine": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "pathogene": "none",
+      "photos": [
+        "../../../assets/img/lonely_tree_185144.jpg"
+      ]
+    },
+    {
+      "id": "id4",
+      "essence": "",
+      "variete": "",
+      "alignement": "",
+      "circonference": 0,
+      "atteintesPhysiologique": "none",
+      "contraintesBatiment": "",
+      "defautsMecaniques": "none",
+      "distanceAuBati": 0,
+      "etatPhysiologique": "",
+      "hauter": 0,
+      "incedentRacine": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "pathogene": "none",
+      "photos": [
+        "../../../assets/img/placeholder.png"
+      ]
     }
-    ]
+  ]
 }
