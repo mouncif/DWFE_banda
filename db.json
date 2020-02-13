@@ -395,5 +395,29 @@
       "Date_commande": "2020-02-11T23:00:00.000Z",
       "action": ""
     }
-  ]
+  ],
+  "Arbres": [
+    {
+      "id": "id1",
+      "essence": "some variety",
+      "variete": "banda",
+      "alignement": "",
+      "circonference": 0,
+      "atteintesPhysiologique": "none",
+      "contraintesBatiment": "",
+      "defautsMecaniques": "none",
+      "distanceAuBati": 0,
+      "etatPhysiologique": "",
+      "hauter": 0,
+      "incedentRacine": "",
+      "position": {
+        "x": 0,
+        "y": 0
+      },
+      "pathogene": "none",
+      "photos": [
+        "../../../assets/img/41302892474_cc34b633f6_b.jpg"
+      ]
+    }
+    ]
 }

@@ -23,6 +23,11 @@ import { ListPlantationComponent } from "./list-plantation/list-plantation.compo
 import { UpdatePlantationComponent } from "./update-plantation/update-plantation.component";
 import { ListPhytosanitaireComponent } from "./list-phytosanitaire/list-phytosanitaire.component";
 import { UpdatePhytosanitaireComponent } from "./update-phytosanitaire/update-phytosanitaire.component";
+import { ListArbresComponent } from './list-arbres/list-arbres.component';
+import { ListComponent } from './list-arbres/list/list.component';
+import { DetailArbreComponent } from './list-arbres/list/detail-arbre/detail-arbre.component';
+import { ModifierArbreComponent } from './list-arbres/list/modifier-arbre/modifier-arbre.component';
+import { NouveauArbreComponent } from './nouveau-arbre/nouveau-arbre.component';
 
 const routes: Routes = [
   {
@@ -106,6 +111,23 @@ const routes: Routes = [
       {
         path: "updatePhytosanitaire",
         component: UpdatePhytosanitaireComponent
+      },
+      {
+        path: 'listAbres', component: ListArbresComponent,
+        children: [
+          {
+            path: '', component: ListComponent
+          },
+          {
+            path: 'detailsArbre/:id', component: DetailArbreComponent
+          },
+          {
+            path: 'modifierArbre/:id', component: ModifierArbreComponent
+          }
+        ]
+      },
+      {
+        path: 'nouveauArbre', component: NouveauArbreComponent
       }
     ]
   },
