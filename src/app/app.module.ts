@@ -1,5 +1,6 @@
 import { BrowserModule } from "@angular/platform-browser";
 import { NgModule } from "@angular/core";
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from "./app-routing.module";
 import { AppComponent } from "./app.component";
@@ -12,15 +13,23 @@ import { MatSnackBarModule } from "@angular/material";
 import { ReactiveFormsModule } from "@angular/forms";
 import { HttpClientModule } from "@angular/common/http";
 
+import { GestionDeVentesModule } from "./gestion-de-ventes/gestion-de-ventes.module";
+import { UtilisateursEtDroitsModule } from "./utilisateurs-et-droits/utilisateurs-et-droits.module";
+import { NavbarComponent } from './navbar/navbar.component';
+import { SidebarComponent } from './sidebar/sidebar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
+    NavbarComponent,
+    SidebarComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    RouterModule,
     MaterialModule,
     FormsModule,
     MatSliderModule,
@@ -28,7 +37,9 @@ import { HttpClientModule } from "@angular/common/http";
     ReactiveFormsModule,
     FormsModule,
     HttpClientModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    GestionDeVentesModule,
+    UtilisateursEtDroitsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

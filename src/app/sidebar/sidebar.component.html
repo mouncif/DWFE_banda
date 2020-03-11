@@ -1,0 +1,14 @@
+<ul>
+  <li
+    (click)="onClckSidebarItem('produits')"
+    [ngClass]="{'itemSelected': this.position == 'produits'}"
+    >Produits</li>
+    <li
+      (click)="onClckSidebarItem('clients')"
+      [ngClass]="{'itemSelected': this.position == 'clients'}"
+      >Clients</li>
+    <li
+      (click)="onClckSidebarItem('fournisseurs')"
+      [ngClass]="{'itemSelected': this.position == 'fournisseurs'}"
+      >Fournisseurs</li>
+</ul>
