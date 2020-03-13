@@ -11,4 +11,9 @@
       (click)="onClckSidebarItem('fournisseurs')"
       [ngClass]="{'itemSelected': this.position == 'fournisseurs'}"
       >Fournisseurs</li>
+    <li
+      *ngIf="isAdmin"
+      (click)="onClckSidebarItem('utilisateurs')"
+      [ngClass]="{'itemSelected': this.position == 'utilisateurs'}"
+      >Utilisateurs</li>
 </ul>

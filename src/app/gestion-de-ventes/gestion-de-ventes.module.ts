@@ -2,6 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { BrowserModule } from "@angular/platform-browser";
 import { RouterModule } from '@angular/router';
+import { FormsModule } from "@angular/forms";
+
 
 
 import { MaterialModule } from "../material/material.module";
@@ -14,6 +16,10 @@ import { ProduitDetailComponent } from './produits/produit-list/produit-detail/p
 import { ClientDetailComponent } from './clients/client-list/client-detail/client-detail.component';
 import { ClientListComponent } from './clients/client-list/client-list.component';
 import { ProduitListComponent } from './produits/produit-list/produit-list.component';
+import { ProduitEditComponent } from './produits/produit-list/produit-edit/produit-edit.component';
+import { ClientEditComponent } from './clients/client-list/client-edit/client-edit.component';
+import { FournisseurEditComponent } from './fournisseurs/fournisseur-list/fournisseur-edit/fournisseur-edit.component';
+import { FournisseurListComponent } from './fournisseurs/fournisseur-list/fournisseur-list.component';
 
 @NgModule({
   declarations: [
@@ -26,12 +32,17 @@ import { ProduitListComponent } from './produits/produit-list/produit-list.compo
     ClientDetailComponent,
     ClientListComponent,
     ProduitListComponent,
+    ProduitEditComponent,
+    ClientEditComponent,
+    FournisseurEditComponent,
+    FournisseurListComponent,
   ],
   imports: [
     CommonModule,
     BrowserModule,
     RouterModule,
-    MaterialModule
+    MaterialModule,
+    FormsModule
   ],
   exports: [
     ProduitsComponent,

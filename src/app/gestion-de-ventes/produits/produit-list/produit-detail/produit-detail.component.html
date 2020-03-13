@@ -1,1 +1,47 @@
-<p>{{produit.nom}}</p>
+<div class="container">
+    <button
+      mat-raised-button color="primary"
+      style="float: right"
+      (click)="onClickModifier()">Modifier</button>
+    <div class="row" style="margin-top: 20px">
+      <div class="col-md-6" id="car-container">
+          <img src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="">
+        </div>
+
+        <div class="col-md-6">
+          <div class="container">
+              <div class="row">
+
+                <div class="col-md-6">
+                    <p>Nom du produit:</p>
+                </div>
+                <div class="col-md-6">
+                    <p>{{produit.nom}}</p>
+                </div>
+
+                <div class="col-md-6">
+                    <p>Nom court du produit:</p>
+                </div>
+                <div class="col-md-6">
+                    <p>{{produit.nom_court}}</p>
+                </div>
+
+                <div class="col-md-6">
+                    <p>Prix:</p>
+                </div>
+                <div class="col-md-6">
+                    <p>{{produit.prix_vente}} DH</p>
+                </div>
+
+                <div class="col-md-6">
+                    <p>Quantite:</p>
+                </div>
+                <div class="col-md-6">
+                    <p>{{produit.quantite_actuel}}</p>
+                </div>
+              </div>
+          </div>
+
+        </div>
+    </div>
+</div>

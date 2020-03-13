@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
+import { Router, ActivatedRoute } from '@angular/router';
+
 
 import { FournisseurService } from '../services/fournisseur.service';
 import  { Fournisseur } from '../models/fournisseur.model';
@@ -11,20 +13,11 @@ import  { Fournisseur } from '../models/fournisseur.model';
 })
 
 export class FournisseursComponent implements OnInit {
-  fournisseurs: Fournisseur[];
-  displayedColumns: string[] = ['id', 'nom', 'nom_court', 'ville', 'adresse', 'tel_fix', 'tel_mobile', 'fax', 'email'];
-  dataSource;
-
-  constructor(private fournisseurService: FournisseurService) { }
 
   ngOnInit() {
-      this.fournisseurs = this.fournisseurService.fournisseurs;
-      this.dataSource = new MatTableDataSource(this.fournisseurs);
+
   }
 
-  applyFilter(event: Event) {
-    const filterValue = (event.target as HTMLInputElement).value;
-    this.dataSource.filter = filterValue.trim().toLowerCase();
-  }
+
 
 }

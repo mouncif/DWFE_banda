@@ -1,0 +1,45 @@
+<div class="container">
+  <div class="mycontainer">
+      <h2> {{ user.firstName }}  {{ user.lastName }}</h2>
+
+          <div class="row">
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Username</mat-label>
+                <input matInput [(ngModel)]="user.username" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Prenom</mat-label>
+                <input matInput [(ngModel)]="user.firstName" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Nom</mat-label>
+                <input matInput [(ngModel)]="lastName" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Role</mat-label>
+                <input matInput [(ngModel)]="user.role" />
+              </mat-form-field>
+
+
+            </div>
+
+
+      <div class="row" style="margin-top: 30px; margin-bottom: 40px; margin-right: auto; margin-left: auto; padding-right: 0px;">
+              <div class="col-2 col-md-2">
+                  <button mat-raised-button color="warn">Delete Tree</button>
+              </div>
+
+              <div class="col-md-3 offset-md-7 col-7 offset-2 col-sm-7 offset-sm-2">
+                  <button mat-raised-button style="margin-left: auto; margin-right: auto">Reset</button>
+                  <button mat-raised-button color="primary" style="margin-left: 5px;">Save changes</button>
+              </div>
+
+
+      </div>
+  </div>
+
+</div>

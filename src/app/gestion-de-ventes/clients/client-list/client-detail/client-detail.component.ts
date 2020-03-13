@@ -14,7 +14,11 @@ export class ClientDetailComponent implements OnInit {
   tabClient: Client[];
   id: number;
 
-  constructor(private clientService: ClientService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private clientService: ClientService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
       this.id = this.activatedRoute.snapshot.params.id;
@@ -26,5 +30,10 @@ export class ClientDetailComponent implements OnInit {
           }
       }
   }
+
+  onClickModifier(){
+      this.router.navigate(["/", "clients", "edit", this.id]);
+  }
+
 
 }

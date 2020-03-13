@@ -1,7 +1,7 @@
 export class Fournisseur
 {
     constructor(
-      private id: number,
+      public id: number,
       private nom: string,
       private nom_court: string,
       private ville: string,

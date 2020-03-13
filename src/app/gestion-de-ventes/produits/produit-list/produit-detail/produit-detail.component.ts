@@ -14,7 +14,11 @@ export class ProduitDetailComponent implements OnInit {
   tabProduit: Produit[];
   id: number;
 
-  constructor(private produitService: ProduitService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private produitService: ProduitService,
+    private activatedRoute: ActivatedRoute,
+    private router: Router
+  ) { }
 
   ngOnInit() {
       this.id = this.activatedRoute.snapshot.params.id;
@@ -25,6 +29,10 @@ export class ProduitDetailComponent implements OnInit {
               this.produit = this.tabProduit[i];
           }
       }
+  }
+
+  onClickModifier(){
+      this.router.navigate(["/", "produits", "edit", this.id]);
   }
 
 }
