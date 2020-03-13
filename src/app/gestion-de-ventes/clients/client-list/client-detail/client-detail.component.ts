@@ -11,7 +11,6 @@ import { Client } from '../../../models/client.model';
 })
 export class ClientDetailComponent implements OnInit {
   client: Client;
-  tabClient: Client[];
   id: number;
 
   constructor(
@@ -22,13 +21,11 @@ export class ClientDetailComponent implements OnInit {
 
   ngOnInit() {
       this.id = this.activatedRoute.snapshot.params.id;
-      this.tabClient = this.clientService.clients;
-
-      for(let i = 0; i < this.tabClient.length; i++){
-          if(this.id == this.tabClient[i].id){
-              this.client = this.tabClient[i];
-          }
-      }
+      this.clientService.findCleint(this.id).subscribe(
+        (client) => {
+          this.client = client;
+        }
+      )
   }
 
   onClickModifier(){

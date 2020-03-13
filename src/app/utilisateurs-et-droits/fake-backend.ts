@@ -53,6 +53,7 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 token: 'fake-jwt-token'
             })
         }
+
         function getUsers() {
             if (!isLoggedIn()) return unauthorized();
             return ok(users);

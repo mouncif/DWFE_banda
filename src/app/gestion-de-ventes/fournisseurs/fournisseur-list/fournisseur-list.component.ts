@@ -24,9 +24,13 @@ export class FournisseurListComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-      this.fournisseurs = this.fournisseurService.fournisseurs;
-      this.dataSource = new MatTableDataSource(this.fournisseurs);
-  }
+      this.fournisseurService.findAll().subscribe(
+        (fournisseurs) => {
+          this.fournisseurs = fournisseurs;
+          this.dataSource = new MatTableDataSource(this.fournisseurs);
+        }
+      );
+    }
 
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;

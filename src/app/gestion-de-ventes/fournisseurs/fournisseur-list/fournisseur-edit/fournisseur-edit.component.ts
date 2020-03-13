@@ -23,12 +23,10 @@ export class FournisseurEditComponent implements OnInit {
 
   ngOnInit() {
       this.id = this.activatedRoute.snapshot.params.id;
-      this.tabFournisseur = this.fournisseurService.fournisseurs;
-
-      for(let i = 0; i < this.tabFournisseur.length; i++){
-          if(this.id == this.tabFournisseur[i].id){
-              this.fournisseur = this.tabFournisseur[i];
-          }
-      }
+      this.fournisseurService.findFournisseur(this.id).subscribe(
+        (fournisseur) => {
+          this.fournisseur = fournisseur;
+        }
+      )
   }
 }

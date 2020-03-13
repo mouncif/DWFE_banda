@@ -11,7 +11,6 @@ import { Produit } from '../../../models/produit.model';
 })
 export class ProduitDetailComponent implements OnInit {
   produit: Produit;
-  tabProduit: Produit[];
   id: number;
 
   constructor(
@@ -22,13 +21,11 @@ export class ProduitDetailComponent implements OnInit {
 
   ngOnInit() {
       this.id = this.activatedRoute.snapshot.params.id;
-      this.tabProduit = this.produitService.produits;
-
-      for(let i = 0; i < this.tabProduit.length; i++){
-          if(this.id == this.tabProduit[i].id){
-              this.produit = this.tabProduit[i];
-          }
-      }
+      this.produitService.findProduit(this.id).subscribe(
+        (produit) => {
+          this.produit = produit;
+        }
+      );
   }
 
   onClickModifier(){
