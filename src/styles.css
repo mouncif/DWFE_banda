@@ -14,3 +14,22 @@ body {
 mat-tab-body-wrapper {
    height: 80%;
 }
+
+.mat-tab-group {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 15%;
+    height: 85%;
+    width: 100%;
+}
+
+.mycontainer{
+  margin-bottom: -5%;
+  background-color: white;
+}
+
+.tabBody-container{
+  padding: 30px;
+  background-color: green;
+}
