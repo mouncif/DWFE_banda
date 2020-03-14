@@ -11,8 +11,8 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
 }
 
-mat-tab-body-wrapper {
-   height: 80%;
+.mat-tab-body-wrapper {
+   height: 100%;
 }
 
 .mat-tab-group {
@@ -25,11 +25,13 @@ mat-tab-body-wrapper {
 }
 
 .mycontainer{
-  margin-bottom: -5%;
-  background-color: white;
+  /*margin-bottom: -5%;*/
+  background-color: #EFEFEF;
+  min-height: 100%
 }
 
 .tabBody-container{
   padding: 30px;
-  background-color: green;
+  background-color: #CBCBCB;
+  min-height: 100%
 }

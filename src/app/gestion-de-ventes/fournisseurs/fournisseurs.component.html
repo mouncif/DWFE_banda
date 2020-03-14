@@ -1,8 +1,12 @@
 <mat-tab-group>
   <mat-tab label="Liste de fournisseurs">
-    <router-outlet></router-outlet>
+    <div class="tabBody-container">
+      <router-outlet></router-outlet>
+    </div>
  </mat-tab>
   <mat-tab label="Noveau fournisseur">
-    <app-nouveau-fournisseur></app-nouveau-fournisseur>
+    <div class="tabBody-container">
+      <app-nouveau-fournisseur></app-nouveau-fournisseur>
+    </div>
   </mat-tab>
 </mat-tab-group>

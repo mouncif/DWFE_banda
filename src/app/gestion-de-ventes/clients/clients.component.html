@@ -1,9 +1,13 @@
 
 <mat-tab-group>
   <mat-tab label="Liste de clients">
-    <router-outlet></router-outlet>
+    <div class="tabBody-container">
+      <router-outlet></router-outlet>
+    </div>
  </mat-tab>
   <mat-tab label="Noveau client">
-    <app-nouveau-client></app-nouveau-client>
+    <div class="tabBody-container">
+      <app-nouveau-client></app-nouveau-client>
+    </div>
   </mat-tab>
 </mat-tab-group>
