@@ -11,7 +11,6 @@ import { User } from '../../../models/user.model';
   styleUrls: ['./user-detail.component.css']
 })
 export class UserDetailComponent implements OnInit {
-  users: User[];
   user: User = new User();
   id: number;
 
@@ -24,14 +23,9 @@ export class UserDetailComponent implements OnInit {
 
   ngOnInit() {
       this.id = this.activatedRoute.snapshot.params["id"];
-      this.userService.getAll().subscribe(
-          (users) => {
-              this.users = users;
-              for(let i = 0; i < this.users.length; i++){
-                  if(this.id == this.users[i].id){
-                      this.user = this.users[i];
-                  }
-              }
+      this.userService.findUser(this.id).subscribe(
+          (user) => {
+              this.user = user;
           }
       );
 

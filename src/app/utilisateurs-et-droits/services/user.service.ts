@@ -6,31 +6,41 @@ import { User } from '../models/user.model';
 
 @Injectable({ providedIn: 'root' })
 export class UserService {
-    private url = 'http://localhost:3000/Clients';
+    private url = 'http://localhost:3000/Users';
+    public users: User[];
+
 
     getAll() {
         return this.http.get<User[]>('http://localhost:4000/users');
     }
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient) {
+      this.findAll().subscribe(
+        (users) => {
+          this.users = users;
+        },
+      )
+    }
 
     findAll() {
       return this.http.get<User[]>(this.url);
     }
 
-    add(client) {
-      return this.http.post<User>(this.url, client);
+    add(user) {
+      return this.http.post<User>(this.url, user);
     }
 
     delete(id) {
       return this.http.delete(`${this.url}/${id}`);
     }
 
-    update(client) {
-      return this.http.put(`${this.url}/${client.id}`, client);
+    update(user) {
+      return this.http.put(`${this.url}/${user.id}`, user);
     }
 
-    findCleint(id) {
+    findUser(id) {
       return this.http.get<User>(`${this.url}/${id}`);
     }
+
+    
 }

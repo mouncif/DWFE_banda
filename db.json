@@ -39,5 +39,48 @@
       "fax": "string",
       "email": "string"
     }
+  ],
+  "Users": [
+      {
+        "id": "1",
+        "username": "user",
+        "password": "test",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "User"
+      },
+      {
+        "id":"2",
+        "username": "admin",
+        "password": "test1",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "Admin"
+      },
+      {
+        "id": "3",
+        "username": "editor",
+        "password": "test1",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "Editor"
+      },
+      {
+        "id": "4",
+        "username": "chiku",
+        "password": "chiku",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "Admin"
+      },
+      {
+        "id": "5",
+        "username": "cj",
+        "password": "cj",
+        "firstName": "Test",
+        "lastName": "User",
+        "role": "Admin"
+      }
+
   ]
 }

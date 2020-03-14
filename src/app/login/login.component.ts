@@ -4,6 +4,9 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { first } from 'rxjs/operators';
 
 import { AuthenticationService } from '../utilisateurs-et-droits/services/authentication.service';
+import { UserService } from '../utilisateurs-et-droits/services/user.service';
+import { User } from '../utilisateurs-et-droits/models/user.model';
+
 
 @Component({
   selector: 'app-login',
@@ -16,12 +19,14 @@ export class LoginComponent implements OnInit {
       submitted = false;
       returnUrl: string;
       error = '';
+      users: User[];
 
       constructor(
           private formBuilder: FormBuilder,
           private route: ActivatedRoute,
           private router: Router,
-          private authenticationService: AuthenticationService
+          private authenticationService: AuthenticationService,
+          private userService: UserService
       ) {
           // redirect to home if already logged in
           if (this.authenticationService.currentUserValue) {
@@ -34,6 +39,11 @@ export class LoginComponent implements OnInit {
             password: ['', Validators.required]
         });
 
+        this.userService.findAll().subscribe(
+          (users) => {
+            this.users = users;
+          }
+        );
         // get return url from route parameters or default to '/'
         this.returnUrl = this.route.snapshot.queryParams['returnUrl'] || '/';
     }
@@ -49,7 +59,7 @@ export class LoginComponent implements OnInit {
         }
 
         this.loading = true;
-        this.authenticationService.login(this.f.username.value, this.f.password.value)
+        this.authenticationService.login(this.f.username.value, this.f.password.value, this.users)
             .pipe(first())
             .subscribe(
                 data => {

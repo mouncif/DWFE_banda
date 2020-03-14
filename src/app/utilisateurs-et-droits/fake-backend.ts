@@ -1,9 +1,10 @@
-import { Injectable } from '@angular/core';
+import { Injectable, OnInit } from '@angular/core';
 import { HttpRequest, HttpResponse, HttpHandler, HttpEvent, HttpInterceptor, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { Observable, of, throwError } from 'rxjs';
 import { delay, mergeMap, materialize, dematerialize } from 'rxjs/operators';
 
 import { User } from './models/user.model';
+import { UserService } from './services/user.service';
 import { Role } from './models/role.model';
 
 
@@ -15,7 +16,16 @@ const users: User[] = [
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
+    users: User[] = users;
+
+    constructor(private userService: UserService){
+
+    }
+
+    ;
+
     intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+
         const { url, method, headers, body } = request;
 
         // wrap in delayed observable to simulate server api call
@@ -40,8 +50,9 @@ export class FakeBackendInterceptor implements HttpInterceptor {
         // route functions
 
         function authenticate() {
-            const { username, password } = body;
-            const user = users.find(x => x.username === username && x.password === password);
+
+            const { username, password, myusers } = body;
+            const user = myusers.find(x => x.username === username && x.password === password);
             if (!user) return error('Username or password is incorrect');
 
             return ok({
