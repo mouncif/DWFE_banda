@@ -29,4 +29,20 @@ export class FournisseurEditComponent implements OnInit {
         }
       )
   }
+
+  onClickSave() {
+      this.fournisseurService.update(this.fournisseur).subscribe();
+  }
+
+  onClickReset(){
+    this.fournisseurService.findFournisseur(this.id).subscribe(
+      (client) => {
+        this.fournisseur = client;
+      }
+    )
+  }
+
+  onClickDelete(){
+    this.fournisseurService.delete(this.fournisseur.id).subscribe();
+  }
 }

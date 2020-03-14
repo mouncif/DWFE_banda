@@ -28,4 +28,20 @@ export class ClientEditComponent implements OnInit {
       )
   }
 
+  onClickSave() {
+      this.clientService.update(this.client).subscribe();
+  }
+
+  onClickReset(){
+    this.clientService.findCleint(this.id).subscribe(
+      (client) => {
+        this.client = client;
+      }
+    )
+  }
+
+  onClickDelete(){
+    this.clientService.delete(this.client.id).subscribe();
+  }
+
 }

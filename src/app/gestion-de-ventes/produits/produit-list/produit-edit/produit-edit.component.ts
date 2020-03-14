@@ -23,4 +23,20 @@ export class ProduitEditComponent implements OnInit {
         }
       )
   }
+
+  onClickSave() {
+      this.produitService.update(this.produit).subscribe();
+  }
+
+  onClickReset(){
+    this.produitService.findProduit(this.id).subscribe(
+      (client) => {
+        this.produit = client;
+      }
+    )
+  }
+
+  onClickDelete(){
+    this.produitService.delete(this.produit.id).subscribe();
+  }
 }

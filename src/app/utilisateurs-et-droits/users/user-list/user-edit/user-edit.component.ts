@@ -30,4 +30,20 @@ export class UserEditComponent implements OnInit {
       );
 
     }
+
+    onClickSave() {
+        this.userService.update(this.user).subscribe();
+    }
+
+    onClickReset(){
+      this.userService.findUser(this.id).subscribe(
+        (user) => {
+          this.user = user;
+        }
+      )
+    }
+
+    onClickDelete(){
+      this.userService.delete(this.user.id).subscribe();
+    }
 }

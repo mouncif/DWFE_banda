@@ -2,7 +2,7 @@
   "Produits": [
     {
       "id": "p1",
-      "nom": "mac book",
+      "nom": "mac book pro",
       "nom_court": "mac",
       "prix_base": "5000",
       "prix_vente": "7000",
@@ -13,11 +13,10 @@
       "quantite_actuel": "20"
     }
   ],
-
   "Clients": [
     {
       "id": "cl1",
-      "nom": "banda",
+      "nom": "cj",
       "prenom": "chiku",
       "statut": "statut",
       "photo": "photo",
@@ -30,7 +29,7 @@
   "Fournisseurs": [
     {
       "id": "f1",
-      "nom": "mba",
+      "nom": "micha",
       "nom_court": "tobias",
       "ville": "settat",
       "adresse": "bla",
@@ -41,46 +40,45 @@
     }
   ],
   "Users": [
-      {
-        "id": "1",
-        "username": "user",
-        "password": "test",
-        "firstName": "Test",
-        "lastName": "User",
-        "role": "User"
-      },
-      {
-        "id":"2",
-        "username": "admin",
-        "password": "test1",
-        "firstName": "Test",
-        "lastName": "User",
-        "role": "Admin"
-      },
-      {
-        "id": "3",
-        "username": "editor",
-        "password": "test1",
-        "firstName": "Test",
-        "lastName": "User",
-        "role": "Editor"
-      },
-      {
-        "id": "4",
-        "username": "chiku",
-        "password": "chiku",
-        "firstName": "Test",
-        "lastName": "User",
-        "role": "Admin"
-      },
-      {
-        "id": "5",
-        "username": "cj",
-        "password": "cj",
-        "firstName": "Test",
-        "lastName": "User",
-        "role": "Admin"
-      }
-
+    {
+      "id": "1",
+      "username": "user",
+      "password": "test",
+      "firstName": "Tesss",
+      "lastName": "User",
+      "role": "User"
+    },
+    {
+      "id": "2",
+      "username": "admin",
+      "password": "test1",
+      "firstName": "Test",
+      "lastName": "User",
+      "role": "Admin"
+    },
+    {
+      "id": "3",
+      "username": "editor",
+      "password": "test1",
+      "firstName": "Test",
+      "lastName": "User",
+      "role": "Editor"
+    },
+    {
+      "id": "4",
+      "username": "chiku",
+      "password": "chiku",
+      "firstName": "Test",
+      "lastName": "User",
+      "role": "Admin"
+    },
+    {
+      "id": "5",
+      "username": "cj",
+      "password": "cj",
+      "firstName": "Test",
+      "lastName": "User",
+      "role": "Admin"
+    }
   ]
 }
