@@ -2,6 +2,7 @@
   max-width: 250px;
   max-height: 300px;
   cursor: pointer;
+  margin: 30px;
 }
 
 .example-header-image {
