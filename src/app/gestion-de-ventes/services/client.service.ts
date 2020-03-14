@@ -11,10 +11,7 @@ import { Client } from '../models/client.model'
 export class ClientService {
   private url = 'http://localhost:3000/Clients';
 
-  clients: Client[] = [
-      new Client(1, "chiku", "banda", "status", "photo", "lkl", "likji", "liji", "oliik"),
-      new Client(2, "chiku", "banda", "status", "photo", "lkl", "likji", "liji", "oliik")
-  ]
+
 
   constructor(private http: HttpClient) { }
 

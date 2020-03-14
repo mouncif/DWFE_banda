@@ -10,10 +10,7 @@ import { Fournisseur } from '../models/fournisseur.model';
 export class FournisseurService {
   private url = 'http://localhost:3000/Fournisseurs';
 
-  fournisseurs: Fournisseur[] = [
-      new Fournisseur(1, "chiku", "cj", "settat", "adresse", "liji", "oijk", "lji", "oijk"),
-      new Fournisseur(2, "chiku", "cj", "settat", "adresse", "liji", "oijk", "lji", "oijk")
-  ]
+
 
   constructor(private http: HttpClient) { }
 
@@ -21,16 +18,16 @@ export class FournisseurService {
     return this.http.get<Fournisseur[]>(this.url);
   }
 
-  add(client) {
-    return this.http.post<Fournisseur>(this.url, client);
+  add(fournisseur) {
+    return this.http.post<Fournisseur>(this.url, fournisseur);
   }
 
   delete(id) {
     return this.http.delete(`${this.url}/${id}`);
   }
 
-  update(client) {
-    return this.http.put(`${this.url}/${client.id}`, client);
+  update(fournisseur) {
+    return this.http.put(`${this.url}/${fournisseur.id}`, fournisseur);
   }
 
   findFournisseur(id) {

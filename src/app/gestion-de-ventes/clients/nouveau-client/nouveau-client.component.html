@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="mycontainer">
+      <h2> {{ client.nom }}  {{ client.prenom }}</h2>
+
+          <div class="row">
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Nom</mat-label>
+                <input matInput [(ngModel)]="client.nom" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Prenom</mat-label>
+                <input matInput [(ngModel)]="client.prenom" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Statut</mat-label>
+                <input matInput [(ngModel)]="client.statut" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Telephone</mat-label>
+                <input matInput [(ngModel)]="client.telephone" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Email</mat-label>
+                <input matInput [(ngModel)]="client.email" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Adresse</mat-label>
+                <input matInput [(ngModel)]="client.adresse" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Ville</mat-label>
+                <input matInput [(ngModel)]="client.ville" />
+              </mat-form-field>
+            </div>
+
+
+      <div class="row" style="margin-top: 30px; margin-bottom: 40px; margin-right: auto; margin-left: auto; padding-right: 0px;">
+              <div class="col-2 col-md-2">
+                  <button mat-raised-button color="warn">Delete Tree</button>
+              </div>
+
+              <div class="col-md-3 offset-md-7 col-7 offset-2 col-sm-7 offset-sm-2">
+                  <button mat-raised-button (click)="onClickReset()" style="margin-left: auto; margin-right: auto">Reset</button>
+                  <button mat-raised-button (click)="onClickSave()" color="primary" style="margin-left: 5px;">Save changes</button>
+              </div>
+      </div>
+  </div>
+
+</div>

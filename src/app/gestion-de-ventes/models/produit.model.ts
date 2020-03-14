@@ -1,15 +1,15 @@
 export class Produit
 {
-  constructor(
-    public id: number,
-    private nom: string,
-    private nom_court: string,
-    private prix_base: number,
-    private prix_vente: number,
-    private seuil_max_remise: number,
-    private unite: number,
-    private image: string,
-    private quantite_initiale: number,
-    private quantite_actuel: number
-  ){}
+
+  public id: number;
+  public nom: string;
+  public nom_court: string;
+  public prix_base: number;
+  public prix_vente: number;
+  public seuil_max_remise: number;
+  public unite: number;
+  public image: string;
+  public quantite_initiale: number;
+  public quantite_actuel: number;
+
 }

@@ -1,14 +1,14 @@
 export class Fournisseur
 {
-    constructor(
-      public id: number,
-      private nom: string,
-      private nom_court: string,
-      private ville: string,
-      private adresse: string,
-      private tel_fix: string,
-      private tel_mobile: string,
-      private fax: string,
-      private email: string
-    ){}
+
+      public id: number;
+      public  nom: string;
+      public  nom_court: string;
+      public ville: string;
+      public adresse: string;
+      public tel_fix: string;
+      public tel_mobile: string;
+      public fax: string;
+      public email: string;
+
 }

@@ -10,7 +10,7 @@ import { Client } from '../../../models/client.model';
   styleUrls: ['./client-detail.component.css']
 })
 export class ClientDetailComponent implements OnInit {
-  client: Client;
+  client: Client = new Client();;
   id: number;
 
   constructor(

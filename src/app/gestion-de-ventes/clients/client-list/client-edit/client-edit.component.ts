@@ -10,7 +10,7 @@ import { Client } from '../../../models/client.model';
   styleUrls: ['./client-edit.component.css']
 })
 export class ClientEditComponent implements OnInit {
-  client: Client;
+  client: Client = new Client();;
   id: number;
 
   constructor(

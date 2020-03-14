@@ -10,7 +10,7 @@ import { Produit } from '../../../models/produit.model';
   styleUrls: ['./produit-edit.component.css']
 })
 export class ProduitEditComponent implements OnInit {
-  produit: Produit;
+  produit: Produit = new Produit();
   id: number;
 
   constructor(private produitService: ProduitService, private activatedRoute: ActivatedRoute) { }

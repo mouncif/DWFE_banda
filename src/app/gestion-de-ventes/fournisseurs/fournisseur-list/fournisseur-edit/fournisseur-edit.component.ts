@@ -11,8 +11,7 @@ import { Fournisseur } from '../../../models/fournisseur.model';
   styleUrls: ['./fournisseur-edit.component.css']
 })
 export class FournisseurEditComponent implements OnInit {
-  fournisseur: Fournisseur;
-  tabFournisseur: Fournisseur[];
+  fournisseur: Fournisseur = new Fournisseur();
   id: number;
 
   constructor(

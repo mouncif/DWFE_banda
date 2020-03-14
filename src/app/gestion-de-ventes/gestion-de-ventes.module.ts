@@ -20,6 +20,9 @@ import { ProduitEditComponent } from './produits/produit-list/produit-edit/produ
 import { ClientEditComponent } from './clients/client-list/client-edit/client-edit.component';
 import { FournisseurEditComponent } from './fournisseurs/fournisseur-list/fournisseur-edit/fournisseur-edit.component';
 import { FournisseurListComponent } from './fournisseurs/fournisseur-list/fournisseur-list.component';
+import { NouveauProduitComponent } from './produits/nouveau-produit/nouveau-produit.component';
+import { NouveauClientComponent } from './clients/nouveau-client/nouveau-client.component';
+import { NouveauFournisseurComponent } from './fournisseurs/nouveau-fournisseur/nouveau-fournisseur.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +39,9 @@ import { FournisseurListComponent } from './fournisseurs/fournisseur-list/fourni
     ClientEditComponent,
     FournisseurEditComponent,
     FournisseurListComponent,
+    NouveauProduitComponent,
+    NouveauClientComponent,
+    NouveauFournisseurComponent,
   ],
   imports: [
     CommonModule,

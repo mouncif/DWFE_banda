@@ -10,7 +10,7 @@ import { Client } from '../../../models/client.model';
   styleUrls: ['./client.component.css']
 })
 export class ClientComponent implements OnInit {
-  @Input("clientItem") client: Client;
+  @Input("clientItem") client: Client = new Client();
 
   constructor(private router: Router) { }
 

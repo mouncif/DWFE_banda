@@ -10,7 +10,7 @@ import { User } from '../../../models/user.model';
   styleUrls: ['./user.component.css']
 })
 export class UserComponent implements OnInit {
-  @Input('userItem') user: User;
+  @Input('userItem') user: User = new User();
 
   constructor(private router: Router) { }
 

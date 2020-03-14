@@ -10,6 +10,7 @@ import { UserListComponent } from './users/user-list/user-list.component';
 import { UserComponent } from './users/user-list/user/user.component';
 import { UserDetailComponent } from './users/user-list/user-detail/user-detail.component';
 import { UserEditComponent } from './users/user-list/user-edit/user-edit.component';
+import { NouveauUtiisateurComponent } from './users/nouveau-utiisateur/nouveau-utiisateur.component';
 
 
 
@@ -19,7 +20,8 @@ import { UserEditComponent } from './users/user-list/user-edit/user-edit.compone
     UserListComponent,
     UserComponent,
     UserDetailComponent,
-    UserEditComponent],
+    UserEditComponent,
+    NouveauUtiisateurComponent],
   imports: [
     CommonModule,
     BrowserModule,

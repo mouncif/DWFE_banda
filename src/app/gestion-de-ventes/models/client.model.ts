@@ -1,14 +1,14 @@
 export class Client
 {
-    constructor(
-      public id: number,
-      private nom: string,
-      private prenom: string,
-      private statut: string,
-      private photo: string,
-      private telephone: string,
-      private email: string,
-      private adresse: string,
-      private ville: string,
-    ){}
+
+      public id: number;
+      public nom: string;
+      public prenom: string;
+      public statut: string;
+      public photo: string;
+      public telephone: string;
+      public email: string;
+      public adresse: string;
+      public ville: string;
+
 }

@@ -1,0 +1,70 @@
+<div class="container">
+  <div class="mycontainer">
+      <h2> Nouveau produit </h2>
+
+          <div class="row">
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Nom</mat-label>
+                <input matInput [(ngModel)]="produit.nom" />
+              </mat-form-field>
+
+              <mat-form-field appearance="fill" class="col-md-6">
+                <mat-label>Nom court</mat-label>
+                <input matInput [(ngModel)]="produit.nom_court" />
+              </mat-form-field>
+            </div>
+
+
+              <div class="row">
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Prix base</mat-label>
+                    <input matInput type="number" [(ngModel)]="produit.prix_base" class="example-right-align"/>
+                    <span matSuffix> &nbsp; DH</span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Prix de vente</mat-label>
+                    <input matInput type="number" [(ngModel)]="produit.prix_vente" class="example-right-align"/>
+                    <span matSuffix>&nbsp; DH</span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Seuil max de remise</mat-label>
+                    <input matInput type="number" [(ngModel)]="produit.seuil_max_remise" class="example-right-align"/>
+                    <span matSuffix>&nbsp; DH</span>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Unite</mat-label>
+                    <input matInput type="number" [(ngModel)]="produit.unite" class="example-right-align"/>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Quantite initiale</mat-label>
+                    <input matInput type="number" [(ngModel)]="produit.quantite_initiale" class="example-right-align"/>
+                  </mat-form-field>
+
+                  <mat-form-field appearance="fill" class="col-md-6">
+                    <mat-label>Quantite actuel</mat-label>
+                    <input matInput type="number" [(ngModel)]="produit.quantite_actuel" class="example-right-align"/>
+                  </mat-form-field>
+              </div>
+
+
+
+      <div class="row" style="margin-top: 30px; margin-bottom: 40px; margin-right: auto; margin-left: auto; padding-right: 0px;">
+              <div class="col-2 col-md-2">
+                  <button mat-raised-button color="warn">Delete Tree</button>
+              </div>
+
+              <div class="col-md-3 offset-md-7 col-7 offset-2 col-sm-7 offset-sm-2">
+                  <button mat-raised-button style="margin-left: auto; margin-right: auto">Reset</button>
+                  <button mat-raised-button (click)="onClickSave()" color="primary" style="margin-left: 5px;">Save changes</button>
+              </div>
+
+
+      </div>
+  </div>
+
+</div>

@@ -10,7 +10,7 @@ import { Produit } from '../../../models/produit.model';
   styleUrls: ['./produit.component.css']
 })
 export class ProduitComponent implements OnInit {
-  @Input("produitItem") produit: Produit;
+  @Input("produitItem") produit: Produit = new Produit();
 
   constructor(private router: Router) { }
 

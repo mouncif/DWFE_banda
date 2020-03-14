@@ -10,11 +10,6 @@ import { Produit } from '../models/produit.model'
 export class ProduitService {
   private url = 'http://localhost:3000/Produits';
 
-  produits: Produit[] = [
-    new Produit(1, "mac book", "mac", 5000, 10000, 500, 550, "image", 100, 30),
-    new Produit(2, "hp envy", "hp", 5000, 10000, 500, 550, "image", 100, 30)
-  ];
-
   constructor(private http: HttpClient) { }
 
   findAll() {
