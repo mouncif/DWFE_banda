@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { ClientService } from '../../../services/client.service';
 import { Client } from '../../../models/client.model';
+import { AuthenticationService } from '../../../../utilisateurs-et-droits/services/authentication.service';
+import { Role } from '../../../../utilisateurs-et-droits/models/role.model';
 
 @Component({
   selector: 'app-client-detail',
@@ -12,11 +14,13 @@ import { Client } from '../../../models/client.model';
 export class ClientDetailComponent implements OnInit {
   client: Client = new Client();;
   id: number;
+  isAdminOrEditor: boolean = false;
 
   constructor(
     private clientService: ClientService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
@@ -25,7 +29,10 @@ export class ClientDetailComponent implements OnInit {
         (client) => {
           this.client = client;
         }
-      )
+      );
+      if(this.authenticationService.currentUserValue.role == Role.Admin || this.authenticationService.currentUserValue.role == Role.Editor ){
+        this.isAdminOrEditor = true;
+      }
   }
 
   onClickModifier(){

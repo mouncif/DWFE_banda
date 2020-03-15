@@ -1,5 +1,5 @@
-<div class="container">
-  <div class="mycontainer">
+<div class="container mycontainer">
+
     <mat-form-field>
       <mat-label>Search</mat-label>
       <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
@@ -66,6 +66,7 @@
           <button
             type="button"
             name="button"
+            *ngIf="isAdminOrEditor"
             (click)="onClickModifier(element.id)"
             >modifier</button>
         </td>
@@ -75,5 +76,5 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
     </table>
 
-  </div>
+
 </div>

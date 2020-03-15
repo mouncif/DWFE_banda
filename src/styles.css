@@ -27,11 +27,11 @@ body {
 .mycontainer{
   /*margin-bottom: -5%;*/
   background-color: #EFEFEF;
-  min-height: 100%
+  min-height: 357px
 }
 
 .tabBody-container{
-  padding: 30px;
+  padding: 17px;
   background-color: #CBCBCB;
   min-height: 100%
 }

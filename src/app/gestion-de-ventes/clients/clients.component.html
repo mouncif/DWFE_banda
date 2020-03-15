@@ -5,7 +5,9 @@
       <router-outlet></router-outlet>
     </div>
  </mat-tab>
-  <mat-tab label="Noveau client">
+  <mat-tab
+    *ngIf="isAdminOrEditor"
+    label="Noveau client">
     <div class="tabBody-container">
       <app-nouveau-client></app-nouveau-client>
     </div>

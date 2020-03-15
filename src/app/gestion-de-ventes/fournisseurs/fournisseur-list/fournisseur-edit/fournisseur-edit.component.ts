@@ -3,6 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { FournisseurService } from '../../../services/fournisseur.service';
 import { Fournisseur } from '../../../models/fournisseur.model';
+import { AuthenticationService } from '../../../../utilisateurs-et-droits/services/authentication.service';
+import { Role } from '../../../../utilisateurs-et-droits/models/role.model';
 
 
 @Component({
@@ -17,10 +19,14 @@ export class FournisseurEditComponent implements OnInit {
   constructor(
     private fournisseurService: FournisseurService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
+      if(this.authenticationService.currentUserValue.role != Role.Admin && this.authenticationService.currentUserValue.role != Role.Editor ){
+        this.router.navigate(["/", "produits"]);
+      }
       this.id = this.activatedRoute.snapshot.params.id;
       this.fournisseurService.findFournisseur(this.id).subscribe(
         (fournisseur) => {

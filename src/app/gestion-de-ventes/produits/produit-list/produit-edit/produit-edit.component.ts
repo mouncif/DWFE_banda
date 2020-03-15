@@ -3,6 +3,9 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { ProduitService } from '../../../services/produit.service';
 import { Produit } from '../../../models/produit.model';
+import { AuthenticationService } from '../../../../utilisateurs-et-droits/services/authentication.service';
+import { Role } from '../../../../utilisateurs-et-droits/models/role.model';
+
 
 @Component({
   selector: 'app-produit-edit',
@@ -13,9 +16,17 @@ export class ProduitEditComponent implements OnInit {
   produit: Produit = new Produit();
   id: number;
 
-  constructor(private produitService: ProduitService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private router: Router,
+    private produitService: ProduitService,
+    private activatedRoute: ActivatedRoute,
+    private authenticationService: AuthenticationService
+  ) { }
 
   ngOnInit() {
+      if(this.authenticationService.currentUserValue.role != Role.Admin && this.authenticationService.currentUserValue.role != Role.Editor ){
+        this.router.navigate(["/", "produits"]);
+      }
       this.id = this.activatedRoute.snapshot.params.id;
       this.produitService.findProduit(this.id).subscribe(
         (produit) => {

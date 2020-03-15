@@ -5,6 +5,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { FournisseurService } from '../../services/fournisseur.service';
 import  { Fournisseur } from '../../models/fournisseur.model';
+import { AuthenticationService } from '../../../utilisateurs-et-droits/services/authentication.service';
+import { Role } from '../../../utilisateurs-et-droits/models/role.model';
 
 
 @Component({
@@ -16,11 +18,13 @@ export class FournisseurListComponent implements OnInit {
   fournisseurs: Fournisseur[];
   displayedColumns: string[] = ['id', 'nom', 'nom_court', 'ville', 'adresse', 'tel_fix', 'tel_mobile', 'fax', 'email', 'action'];
   dataSource;
+  isAdminOrEditor: boolean = false;
 
   constructor(
     private fournisseurService: FournisseurService,
     private activatedRoute: ActivatedRoute,
-    private router: Router
+    private router: Router,
+    private authenticationService: AuthenticationService
   ) { }
 
   ngOnInit() {
@@ -30,6 +34,9 @@ export class FournisseurListComponent implements OnInit {
           this.dataSource = new MatTableDataSource(this.fournisseurs);
         }
       );
+      if(this.authenticationService.currentUserValue.role == Role.Admin || this.authenticationService.currentUserValue.role == Role.Editor ){
+        this.isAdminOrEditor = true;
+      }
     }
 
   applyFilter(event: Event) {
