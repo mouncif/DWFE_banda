@@ -3,8 +3,8 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { ClientService } from '../../../services/client.service';
 import { Client } from '../../../models/client.model';
-import { AuthenticationService } from '../../../../utilisateurs-et-droits/services/authentication.service';
-import { Role } from '../../../../utilisateurs-et-droits/models/role.model';
+import { AuthenticationService } from 'src/app/utilisateurs-et-droits/services/authentication.service';
+import { Role } from 'src/app/utilisateurs-et-droits/models/role.model';
 
 
 @Component({
@@ -15,6 +15,7 @@ import { Role } from '../../../../utilisateurs-et-droits/models/role.model';
 export class ClientEditComponent implements OnInit {
   client: Client = new Client();;
   id: number;
+  photoLink: string = "";
 
   constructor(
     private clientService: ClientService,
@@ -37,6 +38,7 @@ export class ClientEditComponent implements OnInit {
 
   onClickSave() {
       this.clientService.update(this.client).subscribe();
+      this.router.navigate(["/", "clients"]);
   }
 
   onClickReset(){
@@ -49,6 +51,11 @@ export class ClientEditComponent implements OnInit {
 
   onClickDelete(){
     this.clientService.delete(this.client.id).subscribe();
+      this.router.navigate(["/", "clients"]);
+  }
+
+  onFileSelected(event){
+    this.client.photo = "./assets/img/" + event.target.files[0].name;
   }
 
 }

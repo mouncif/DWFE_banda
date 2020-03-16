@@ -8,4 +8,5 @@ export class User {
     lastName: string;
     token?: string;
     role: Role;
+    photo: string = "./assets/img/placeholder.png"
 }

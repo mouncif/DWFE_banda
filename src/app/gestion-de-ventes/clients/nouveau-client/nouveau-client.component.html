@@ -1,4 +1,16 @@
 <div class="container mycontainer">
+  <img
+    [(src)]="client.photo"
+    alt=""
+    (click)="fileInput.click()"
+    >
+  <input
+      type="file"
+      style="display: none"
+      (change)="onFileSelected($event)"
+      multiple
+      #fileInput
+      >
       <h2> {{ client.nom }}  {{ client.prenom }}</h2>
 
           <div class="row">

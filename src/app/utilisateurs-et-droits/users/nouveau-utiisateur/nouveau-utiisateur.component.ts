@@ -27,6 +27,11 @@ export class NouveauUtiisateurComponent implements OnInit {
 
     onClickSave() {
         this.userService.add(this.user).subscribe();
+        this.router.navigate(["/", "utilisateurs"]);
+    }
+
+    onFileSelected(event){
+      this.user.photo = "./assets/img/" + event.target.files[0].name;
     }
 
 }

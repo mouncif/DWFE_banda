@@ -6,6 +6,7 @@ import { first } from 'rxjs/operators';
 import { AuthenticationService } from '../utilisateurs-et-droits/services/authentication.service';
 import { UserService } from '../utilisateurs-et-droits/services/user.service';
 import { User } from '../utilisateurs-et-droits/models/user.model';
+import { Role } from '../utilisateurs-et-droits/models/role.model';
 
 
 @Component({
@@ -20,6 +21,9 @@ export class LoginComponent implements OnInit {
       returnUrl: string;
       error = '';
       users: User[];
+      adminExample: User;
+      userExample: User;
+      editorExample: User;
 
       constructor(
           private formBuilder: FormBuilder,
@@ -42,6 +46,24 @@ export class LoginComponent implements OnInit {
         this.userService.findAll().subscribe(
           (users) => {
             this.users = users;
+            for(let i = 0; i < this.users.length; i++){
+              if(this.users[i].role == Role.Admin){
+                this.adminExample = this.users[i];
+                break;
+              }
+            }
+            for(let i = 0; i < this.users.length; i++){
+              if(this.users[i].role == Role.User){
+                this.userExample = this.users[i];
+                break;
+              }
+            }
+            for(let i = 0; i < this.users.length; i++){
+              if(this.users[i].role == Role.Editor){
+                this.editorExample = this.users[i];
+                break;
+              }
+            }
           }
         );
         // get return url from route parameters or default to '/'

@@ -29,6 +29,11 @@ export class NouveauClientComponent implements OnInit {
 
   onClickSave() {
       this.clientService.add(this.client).subscribe();
+      this.router.navigate(["/", "clients"]);
+  }
+
+  onFileSelected(event){
+    this.client.photo = "./assets/img/" + event.target.files[0].name;
   }
 
 }

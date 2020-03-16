@@ -37,6 +37,7 @@ export class ProduitEditComponent implements OnInit {
 
   onClickSave() {
       this.produitService.update(this.produit).subscribe();
+      this.router.navigate(["/", "produits"]);
   }
 
   onClickReset(){
@@ -49,5 +50,10 @@ export class ProduitEditComponent implements OnInit {
 
   onClickDelete(){
     this.produitService.delete(this.produit.id).subscribe();
+    this.router.navigate(["/", "produits"]);
+  }
+
+  onFileSelected(event){
+    this.produit.image = "./assets/img/" + event.target.files[0].name;
   }
 }

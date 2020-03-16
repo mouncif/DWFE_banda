@@ -40,4 +40,5 @@ export class ClientDetailComponent implements OnInit {
   }
 
 
+
 }

@@ -33,6 +33,7 @@ export class UserEditComponent implements OnInit {
 
     onClickSave() {
         this.userService.update(this.user).subscribe();
+        this.router.navigate(["/", "utilisateurs"]);
     }
 
     onClickReset(){
@@ -45,5 +46,11 @@ export class UserEditComponent implements OnInit {
 
     onClickDelete(){
       this.userService.delete(this.user.id).subscribe();
+      this.router.navigate(["/", "utilisateurs"]);
     }
+
+    onFileSelected(event){
+      this.user.photo = "./assets/img/" + event.target.files[0].name;
+    }
+
 }

@@ -8,7 +8,7 @@ export class Produit
   public prix_vente: number;
   public seuil_max_remise: number;
   public unite: number;
-  public image: string;
+  public image: string = "./assets/img/placeholder.png";
   public quantite_initiale: number;
   public quantite_actuel: number;
 

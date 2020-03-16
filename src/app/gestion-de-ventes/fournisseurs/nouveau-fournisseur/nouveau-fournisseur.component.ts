@@ -25,6 +25,7 @@ export class NouveauFournisseurComponent implements OnInit {
 
   onClickSave() {
       this.fournisseurService.add(this.fournisseur).subscribe();
+      this.router.navigate(["/", "fournisseurs"]);
   }
 
 }

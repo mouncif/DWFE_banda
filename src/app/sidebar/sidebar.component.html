@@ -2,18 +2,18 @@
   <li
     (click)="onClckSidebarItem('produits')"
     [ngClass]="{'itemSelected': this.position == 'produits'}"
-    >Produits</li>
+    ><mat-icon>shopping_cart</mat-icon> <span>Produits</span></li>
     <li
       (click)="onClckSidebarItem('clients')"
       [ngClass]="{'itemSelected': this.position == 'clients'}"
-      >Clients</li>
+      ><mat-icon>group</mat-icon> <span>Clients</span></li>
     <li
       (click)="onClckSidebarItem('fournisseurs')"
       [ngClass]="{'itemSelected': this.position == 'fournisseurs'}"
-      >Fournisseurs</li>
+      ><mat-icon> local_shipping</mat-icon> <span>Fournisseurs</span></li>
     <li
       *ngIf="isAdmin"
       (click)="onClckSidebarItem('utilisateurs')"
       [ngClass]="{'itemSelected': this.position == 'utilisateurs'}"
-      >Utilisateurs</li>
+      ><mat-icon>perm_identity</mat-icon> <span>Utilisateurs</span></li>
 </ul>

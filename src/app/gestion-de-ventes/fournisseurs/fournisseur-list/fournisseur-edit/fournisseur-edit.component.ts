@@ -37,6 +37,7 @@ export class FournisseurEditComponent implements OnInit {
 
   onClickSave() {
       this.fournisseurService.update(this.fournisseur).subscribe();
+      this.router.navigate(["/", "fournisseurs"]);
   }
 
   onClickReset(){
@@ -49,5 +50,6 @@ export class FournisseurEditComponent implements OnInit {
 
   onClickDelete(){
     this.fournisseurService.delete(this.fournisseur.id).subscribe();
+    this.router.navigate(["/", "fournisseurs"]);
   }
 }

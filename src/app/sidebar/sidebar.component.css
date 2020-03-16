@@ -7,9 +7,23 @@ ul>li
     height: 50px;
     padding-top: 12px;
     cursor: pointer;
+    color: #7D7D7D;
+    font-size: 18px;
 }
 
 .itemSelected
 {
-    color: #FFAA56;
+    color: #FFAA56 !important;
+}
+
+li:hover {
+    background-color: #272421 !important;
+}
+
+li>mat-icon{
+  margin-left: 1rem;
+}
+
+li>span{
+  margin-left: 10px;
 }

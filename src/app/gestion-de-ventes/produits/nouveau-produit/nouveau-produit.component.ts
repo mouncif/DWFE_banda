@@ -13,12 +13,20 @@ export class NouveauProduitComponent implements OnInit {
   produit: Produit = new Produit();
   id: number;
 
-  constructor(private produitService: ProduitService, private activatedRoute: ActivatedRoute) { }
+  constructor(
+    private router: Router,
+    private produitService: ProduitService,
+    private activatedRoute: ActivatedRoute) { }
 
   ngOnInit() {
   }
 
   onClickSave() {
       this.produitService.add(this.produit).subscribe();
+      this.router.navigate(["/", "produits"]);
+  }
+
+  onFileSelected(event){
+    this.produit.image = "./assets/img/" + event.target.files[0].name;
   }
 }

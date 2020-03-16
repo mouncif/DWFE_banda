@@ -6,3 +6,10 @@ input.example-right-align::-webkit-inner-spin-button {
 input.example-right-align {
   -moz-appearance: textfield;
 }
+
+img{
+    width: 170px;
+    height: 160px;
+    border-radius: 50%;
+    cursor: pointer;
+}

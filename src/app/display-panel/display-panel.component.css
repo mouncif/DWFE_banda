@@ -1,5 +1,17 @@
 div{
   width: 100%;
   height: 15%;
-  background-color: #FFAA56
+  background-color: #a74444;
+  padding-left: 24px;
+  padding-top: 1rem;
+}
+
+p#heading{
+  color: white;
+  font-size: x-large;
+  margin-top: 7px
+}
+
+p#route{
+
 }

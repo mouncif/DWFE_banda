@@ -8,15 +8,9 @@ import { UserService } from './services/user.service';
 import { Role } from './models/role.model';
 
 
-const users: User[] = [
-    { id: 1, username: 'user', password: 'test', firstName: 'Test', lastName: 'User', role: Role.User },
-    { id: 2, username: 'admin', password: 'test1', firstName: 'Test', lastName: 'User', role: Role.Admin },
-    { id: 2, username: 'editor', password: 'test1', firstName: 'Test', lastName: 'User', role: Role.Editor }
-];
 
 @Injectable()
 export class FakeBackendInterceptor implements HttpInterceptor {
-    users: User[] = users;
 
     constructor(private userService: UserService){
 
@@ -39,8 +33,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
             switch (true) {
                 case url.endsWith('/users/authenticate') && method === 'POST':
                     return authenticate();
-                case url.endsWith('/users') && method === 'GET':
-                    return getUsers();
                 default:
                     // pass through any requests not handled above
                     return next.handle(request);
@@ -63,11 +55,6 @@ export class FakeBackendInterceptor implements HttpInterceptor {
                 role: user.role,
                 token: 'fake-jwt-token'
             })
-        }
-
-        function getUsers() {
-            if (!isLoggedIn()) return unauthorized();
-            return ok(users);
         }
 
         // helper functions

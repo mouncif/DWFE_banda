@@ -1,7 +1,18 @@
 <div class="container">
   <div class="mycontainer">
       <h2> Nouveau produit </h2>
-
+      <img
+        [(src)]="produit.image"
+        alt=""
+        (click)="fileInput.click()"
+        >
+      <input
+          type="file"
+          style="display: none"
+          (change)="onFileSelected($event)"
+          multiple
+          #fileInput
+          >
           <div class="row">
 
               <mat-form-field appearance="fill" class="col-md-6">

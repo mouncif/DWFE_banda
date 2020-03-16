@@ -1,50 +1,16 @@
 {
   "Produits": [
     {
-      "id": "p1",
-      "nom": "mac book pro",
-      "nom_court": "mac",
-      "prix_base": "5000",
-      "prix_vente": "7000",
-      "seuil_max_remise": "500",
-      "unite": "50",
-      "image": "string",
-      "quantite_initiale": "50",
-      "quantite_actuel": "20"
-    },
-    {
-      "id": "_K39Dzo",
-      "nom": "toshiba",
-      "nom_court": "tob",
-      "prix_base": 500,
-      "prix_vente": 8000,
-      "seuil_max_remise": 222,
-      "unite": 5,
-      "image": "",
+      "image": "./assets/img/microsoft-surface-studio-2-feat.jpg",
+      "nom": "microsoft surface studio",
+      "nom_court": "ms studio",
+      "prix_base": 10000,
+      "prix_vente": 15000,
+      "seuil_max_remise": 1000,
+      "unite": 50,
       "quantite_initiale": 50,
-      "quantite_actuel": 8
-    },
-    {
-      "nom": "id2kkkkkk",
-      "nom_court": "eucalyptus",
-      "prix_base": 444,
-      "prix_vente": 555,
-      "seuil_max_remise": 5555,
-      "unite": 555,
-      "quantite_initiale": 4444,
-      "quantite_actuel": 4444,
-      "id": "RrmBj5Y"
-    },
-    {
-      "nom": "l l, ",
-      "nom_court": "k,ml",
-      "prix_base": 55,
-      "prix_vente": 45,
-      "seuil_max_remise": 555,
-      "unite": 555,
-      "quantite_initiale": 555,
-      "quantite_actuel": 532,
-      "id": "zKBm-Ph"
+      "quantite_actuel": 50,
+      "id": 1
     }
   ],
   "Clients": [
@@ -53,7 +19,7 @@
       "nom": "cj",
       "prenom": "chiku",
       "statut": "statut",
-      "photo": "photo",
+      "photo": "./assets/img/client-service-representative.jpg",
       "telephone": "string",
       "email": "string",
       "adresse": "string",
@@ -67,7 +33,19 @@
       "adresse": "lkmlk",
       "telephone": "klml",
       "ville": "lkmlm",
-      "id": "ITeHmeQ"
+      "id": "ITeHmeQ",
+      "photo": "./assets/img/client-service-representative.jpg"
+    },
+    {
+      "photo": "./assets/img/client-service-representative.jpg",
+      "nom": "id2",
+      "prenom": "f;l",
+      "statut": "lkmkll",
+      "telephone": "lkml",
+      "email": "lkml",
+      "adresse": "lkml",
+      "ville": "lml;",
+      "id": "6pSaf1w"
     }
   ],
   "Fournisseurs": [
@@ -96,51 +74,13 @@
   ],
   "Users": [
     {
-      "id": "1",
-      "username": "user",
-      "password": "test",
-      "firstName": "Tesss",
-      "lastName": "User",
-      "role": "User"
-    },
-    {
-      "id": "2",
-      "username": "admin",
-      "password": "test1",
-      "firstName": "Test",
-      "lastName": "User",
-      "role": "Admin"
-    },
-    {
-      "id": "3",
-      "username": "editor",
-      "password": "test1",
-      "firstName": "Test",
-      "lastName": "User",
-      "role": "Editor"
-    },
-    {
-      "id": "4",
-      "username": "chiku",
-      "password": "chiku",
-      "firstName": "Test",
-      "lastName": "User",
-      "role": "Admin"
-    },
-    {
       "id": "5",
       "username": "cj",
       "password": "cj",
       "firstName": "Test",
       "lastName": "User",
-      "role": "Admin"
-    },
-    {
-      "id": "9",
-      "username": "new",
-      "firstName": "new",
-      "lastName": "new",
-      "password": "1234"
+      "role": "Admin",
+      "photo": "./assets/img/41302892474_cc34b633f6_b.jpg"
     }
   ]
 }
